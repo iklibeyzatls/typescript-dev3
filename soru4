@@ -1,0 +1,14 @@
+// Soru4.ts
+
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const person = {
+  name: "Mehmet",
+  age: 20,
+  city: "İstanbul"
+};
+
+console.log(getProperty(person, "name")); // "Mehmet"
+console.log(getProperty(person, "age"));  // 20
